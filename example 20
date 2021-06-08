@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner input = new Scanner(System.in);
+        double order,tax,total;
+        boolean state;
+        System.out.print("What is the order amount?:");
+        order = input.nextDouble();
+        System.out.print("What is the state?:");
+        state = input.nextBoolean();
+        if("WI".equals(state))
+        {
+            System.out.println("Subtotal: "+order);
+            tax = order*.05;
+            System.out.print("The tax is: $"+tax+ "");
+        }
+        tax = order*.055;
+        total=order+tax;
+        
+        System.out.print("the total is: "+total);
+    }
+}
